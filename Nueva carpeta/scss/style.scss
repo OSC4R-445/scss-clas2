@@ -1,0 +1,80 @@
+@import "colors";
+@import "fonts";
+@import "borders";
+
+.btn {
+    background: $color-default;
+    border: $border-0;
+    font: {
+        family: $font-family;
+        weight: $font-900;
+    }
+    &-primary {
+        background: $color-primary;
+    }
+    &-secondary {
+        background: $color-secondary;
+    }
+    &-small {
+        font: {
+            size: .8em;
+            weight: $font-400
+        }
+    }
+    &-medium {
+        font: {
+            size: 1.2em;
+            weight: $font-400
+        }
+    }
+    &-large {
+        font: {
+            size: 2em;
+        }
+    }
+}
+
+%message {
+    border-radius: 4px;
+    border: 1px solid;
+    font-family: $font-family;
+    line-height: 1.1em;
+    margin-bottom: 1em;
+    padding: 1em 1.5em;
+}
+.message-success {
+    @extend %message;
+    background: #def8d7;
+    border-color: #35cd56;
+    color: #1c7232;
+}
+.message-error {
+    @extend %message;
+    background: #f8d7da;
+    border-color: #cd3545;
+    color: #721c24;
+}
+.message-warning {
+    @extend %message;
+    background: #f6f8d7;
+    border-color: #cacd35;
+    color: #725e1c;
+}
+
+$font-size-base: 20px;
+$line-height-base: 1.5;
+.h1 { font-size: $font-size-base * 3; } 
+.h2 { font-size: $font-size-base * 2.5; } 
+.h3 { font-size: $font-size-base * 1.8; } 
+.p { font-size: $font-size-base ; }
+.two-columns {
+    display: flex;
+    justify-content: space-between;
+    background: red;
+    .column {
+        width: (100% / 2) - 8;
+        background: #333;
+        padding: 10px;
+        color: white;
+    }
+}
